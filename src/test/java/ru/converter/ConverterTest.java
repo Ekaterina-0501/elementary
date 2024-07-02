@@ -35,7 +35,7 @@ class ConverterTest {
     }
 
     @Test
-    void whenConvert25RblThen0Dot2778Dlr(){
+    void whenConvert25RblThen0Dot2778Dlr() {
         float in = 25;
         float expected = 0.2778f;
         float out = Converter.rubleToDollar(in);
