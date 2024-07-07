@@ -2,12 +2,10 @@ package ru.condition;
 
 public class AlertDivByZero {
     public static void possibleDiv(int number) {
-        boolean result = number == 0;
-        if (result) {
+            if (number == 0) {
             System.out.println(number + "  Could not div by 0.");
         }
-        result = number < 0;
-        if (result) {
+            if (number < 0) {
             System.out.println(number + "  This is negative number");
         }
     }
