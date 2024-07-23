@@ -8,7 +8,7 @@ class FindLoopTest {
     @Test
     void whenArrayHas5Then0() {
         int el = 5;
-        int[] array = new int[]{5, 3, 1, 6};
+        int[] array = {5, 3, 1, 6};
         int result = FindLoop.indexOf(array, el);
         int expected = 0;
         assertThat(result).isEqualTo(expected);
@@ -17,7 +17,7 @@ class FindLoopTest {
     @Test
     void whenArrayHasNot10ThenMinus1() {
         int el = 10;
-        int[] array = new int[]{5, 3, 1, 6};
+        int[] array = {5, 3, 1, 6};
         int result = FindLoop.indexOf(array, el);
         int expected = -1;
         assertThat(result).isEqualTo(expected);
