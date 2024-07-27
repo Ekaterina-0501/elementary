@@ -29,5 +29,4 @@ class MatrixTest {
         };
         assertThat(result).isDeepEqualTo(expected);
     }
-
-        }
+}
