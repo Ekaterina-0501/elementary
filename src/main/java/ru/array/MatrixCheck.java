@@ -1,7 +1,7 @@
 package ru.array;
 
 public class MatrixCheck {
-    public  static boolean monoHorizontal(char[][] board, int row) {
+    public static boolean monoHorizontal(char[][] board, int row) {
         boolean result = true;
         for (int cel = 0; cel < board[row].length; cel++) {
             if (board[row][cel] != 'X') {
@@ -29,5 +29,22 @@ public class MatrixCheck {
             rsl[i] = board[i][i];
         }
         return rsl;
+    }
+
+    public static boolean isWin(char[][] board) {
+        boolean result = false;
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][i] == 'X') {
+                if (monoHorizontal(board, i)) {
+                    result = true;
+                    break;
+                }
+                if (monoVertical(board, i)) {
+                    result = true;
+                    break;
+                }
+            }
+        }
+        return result;
     }
 }
