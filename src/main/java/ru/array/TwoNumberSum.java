@@ -5,18 +5,15 @@ public class TwoNumberSum {
         int i = 0;
         int j = array.length - 1;
         int[] rsl = {};
-        while (i < array.length / 2) {
+        while (i < j) {
             if (array[i] + array[j] == target) {
                 rsl = new int[]{i, j};
                 break;
-            } else {
+            } else if (array[i] + array[j] < target) {
                 i++;
+            } else {
+                j--;
             }
-            if (array[i] + array[j] == target) {
-                rsl = new int[]{i, j};
-                break;
-            }
-            j--;
         }
         return rsl;
     }
