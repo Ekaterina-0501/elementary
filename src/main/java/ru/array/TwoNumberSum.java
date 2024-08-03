@@ -6,10 +6,11 @@ public class TwoNumberSum {
         int j = array.length - 1;
         int[] rsl = {};
         while (i < j) {
-            if (array[i] + array[j] == target) {
+            int sum = array[i] + array[j];
+            if (sum == target) {
                 rsl = new int[]{i, j};
                 break;
-            } else if (array[i] + array[j] < target) {
+            } else if (sum < target) {
                 i++;
             } else {
                 j--;
