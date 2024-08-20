@@ -15,11 +15,13 @@ class MaxTest {
     }
 
     @Test
-    void whenMax99To51Then99() {
+    void whenMax1000To99And51And0Then1000() {
         int left = 99;
         int right = 51;
-        int result = Max.max(left, right);
-        int expected = 99;
+        int middle1 = 1000;
+        int middle2 = 0;
+        int result = Max.max(left, right, middle1, middle2);
+        int expected = 1000;
         assertThat(result).isEqualTo(expected);
     }
 
@@ -33,11 +35,12 @@ class MaxTest {
     }
 
     @Test
-    void whenMax5ToMinus5Then5() {
+    void whenMax7To1And5Then7() {
         int left = 5;
-        int right = 5;
-        int result = Max.max(left, right);
-        int expected = 5;
+        int right = 1;
+        int middle = 7;
+        int result = Max.max(left, right, middle);
+        int expected = 7;
         assertThat(result).isEqualTo(expected);
     }
 
