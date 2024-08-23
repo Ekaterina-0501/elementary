@@ -3,8 +3,9 @@ package ru.max;
 public class Reduce {
     private int[] array;
 
-    public void to(int[] a) {
-        array = a;
+    public void to(int[] array) {
+        this.array = array;
+        array = array;
     }
 
     public void print() {
